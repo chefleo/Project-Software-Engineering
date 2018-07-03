@@ -1,6 +1,6 @@
-#Progetto-web
-Il progetto consiste nel salvare le credenziali di accesso ed accedere a un sito web configurabile nell'app
+#Web-Project
+#The project consists of saving access credentials and accessing a configurable website in the app
 
-Il sito viene visualizzato all'interno della webview
+#The site is displayed within the webview
 
-Funzioni di chiusura/disconnessione/configurazione del sito e delle credenziali
+#Functions for closing / disconnecting / configuring the site and credentials
