@@ -10,30 +10,33 @@ import java.net.URL;
 
 public class second extends AppCompatActivity{
 
-    private WebView browser;
-
+	private WebView browser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+    	super.onCreate(savedInstanceState);
+    	setContentView(R.layout.activity_second);
+    	Intent toy = getIntent();
+    	// Get the url string from MainActivity
+    	String web = toy.getStringExtra("Url");
 
-        Intent toy = getIntent();
-        String web = toy.getStringExtra("Url");
-        String host = browser.getUrl();
-        browser = (WebView) findViewById(R.id.browser);
-        browser.setWebViewClient(new WebViewClient());
-        browser.getSettings().setJavaScriptEnabled(true);
-        browser.loadUrl("" + web);
+    	// Get host         if I use browser.getUrl() the app crash
+    	//String host = browser.getUrl();
 
+    	//Creation of webview
+    	browser = (WebView) findViewById(R.id.browser);
+    	browser.setWebViewClient(new WebViewClient());
+    	browser.getSettings().setJavaScriptEnabled(true);
+
+    	// Use the string "web" for load the page
+    	browser.loadUrl("" + web);
     }
 
     @Override
     public void onBackPressed() {
-
-        if (browser.canGoBack()) {
+    	if (browser.canGoBack()) {
             browser.goBack();
-        } else {
-            super.onBackPressed();
-        }
+    	} else {
+    		super.onBackPressed();
+    	}
     }
 }
