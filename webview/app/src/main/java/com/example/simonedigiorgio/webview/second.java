@@ -11,6 +11,7 @@ import java.net.URL;
 public class second extends AppCompatActivity{
 
 	private WebView browser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
