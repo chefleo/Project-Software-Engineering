@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SharedPref</string>
+    <string name="todo" />
+</resources>
