@@ -11,7 +11,7 @@ public class Test extends AppCompatActivity {
 
 	private EditText Url, Username, Password;
 	private Button go_back;
-	private boolean ritChecked = false;
+	private boolean checked = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +29,19 @@ public class Test extends AppCompatActivity {
 		String username = ottenuto.getStringExtra("username");
 		String password = ottenuto.getStringExtra("password");
 
-		final Intent ritorna = new Intent(Test.this, MainActivity.class);
-		ritorna.putExtra("checked", ritChecked);
+		//final Intent ritorna = new Intent(Test.this, MainActivity.class);
+		//ritorna.putExtra("checked", checked);
 
 		Url.setText(url);
 		Username.setText(username);
 		Password.setText(password);
-
+		/*
 		go_back.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				startActivity(ritorna);
 			}
 		});
-
+		*/
 	}
 }
